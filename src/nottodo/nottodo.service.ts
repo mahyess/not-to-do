@@ -10,6 +10,7 @@ export class NottodoService {
       id: 1,
       name: 'todo',
       description: 'todo description',
+      done: false,
     },
   ]
 

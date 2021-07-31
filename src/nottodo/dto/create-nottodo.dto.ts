@@ -1,4 +1,4 @@
-import { IsString, Length } from 'class-validator'
+import { IsBoolean, IsOptional, IsString, Length } from 'class-validator'
 
 export class CreateNottodoDto {
   @IsString()
@@ -8,4 +8,8 @@ export class CreateNottodoDto {
   @IsString()
   @Length(10, 200)
   readonly description: string
+
+  @IsBoolean()
+  @IsOptional()
+  readonly done: boolean
 }

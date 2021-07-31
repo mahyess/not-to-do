@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common'
+import { ConfigModule } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
@@ -15,7 +16,10 @@ import { NottodoModule } from './nottodo/nottodo.module'
       password: 'supersecretpassword',
       database: 'postgres',
       autoLoadEntities: true,
-      synchronize: true,
+      synchronize: parseInt(process.env.DEBUG) === 1,
+    }),
+    ConfigModule.forRoot({
+      isGlobal: true,
     }),
   ],
   controllers: [AppController],
