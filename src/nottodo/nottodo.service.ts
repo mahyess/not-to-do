@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, NotFoundException } from '@nestjs/common'
+import { NotFoundException } from '@nestjs/common'
 import { Injectable } from '@nestjs/common'
 import { CreateNottodoDto, UpdateNottodoDto } from './dto'
 import { NotTodo } from './entities/nottodo.entity'
