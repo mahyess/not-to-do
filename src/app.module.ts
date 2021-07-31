@@ -10,7 +10,7 @@ import { NottodoModule } from './nottodo/nottodo.module'
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
-      port: 54321,
+      port: 5432,
       username: 'postgres',
       password: 'supersecretpassword',
       database: 'postgres',
